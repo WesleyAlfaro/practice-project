@@ -12,7 +12,7 @@ jobs:
           node-version: 18
       - name: Install dependencies
         run: npm ci
-      - name: Run lin
+      - name: Run lint
         run: npm run lint
   test:
     needs: lint
@@ -25,5 +25,7 @@ jobs:
         with:
           node-version: 18
       - name: Install dependencies
+        run: npm ci
+      - name: Run tests
         run: npm test
       
